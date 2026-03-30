@@ -1,2 +1,1 @@
-web: bash -c "python bot.py & uvicorn main:app --host 0.0.0.0 --port $PORT"
-
+web: bash -c "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000} & python bot.py"
